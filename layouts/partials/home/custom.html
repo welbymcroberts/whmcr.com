@@ -1,0 +1,29 @@
+<!-- List of posts -->
+
+
+{{ range (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
+<article>
+    <header class="max-w-prose">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        <a href={{ .RelPermalink }}>{{ .Title | emojify }}</a>
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      {{ if and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
+        <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+          <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+            {{ partial "toc.html" . }}
+          </div>
+        </div>
+      {{ end }}
+      <div class="min-w-0 min-h-0 max-w-prose">
+        {{ .Content | emojify }}
+      </div>
+    </section>
+  </article>
+  <br /><hr><br />
+  {{ end }}
+  {{ partial "pagination.html" . }}

@@ -1,0 +1,23 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "WHMCR"
+# logo = "img/logo.jpg"
+description = "Random Mutterings"
+#copyright = "Copyright"
+dateFormat = "2 January 2006"
+
+[author]
+  name = "Welby McRoberts"
+  # image = "img/author.jpg"
+  headline = ""
+  bio = "Bio"
+  links = [
+     { github = "https://github.com/welbymcroberts" },
+     { linkedin = "https://linkedin.com/in/welbymcroberts" },
+     { twitter = "https://twitter.com/welbymcroberts" },
+  ]
