@@ -45,7 +45,7 @@ aaaa:53 {
 }
 .:53 {
   import bind
-  forward . 1.2.1.2
+  forward . 1.1.1.1
 }
 ```
 
