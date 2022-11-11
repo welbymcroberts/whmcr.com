@@ -19,5 +19,6 @@ dateFormat = "2 January 2006"
   links = [
      { github = "https://github.com/welbymcroberts" },
      { linkedin = "https://linkedin.com/in/welbymcroberts" },
+     { mastodon = "https://toot.whmcr.com/welbymcroberts"},
      { twitter = "https://twitter.com/welbymcroberts" },
   ]
