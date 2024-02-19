@@ -1,0 +1,23 @@
+{
+  "subject": "acct:welbymcroberts@mastodon.social",
+  "aliases": [
+    "https://mastodon.social/@welbymcroberts",
+    "https://mastodon.social/users/welbymcroberts"
+  ],
+  "links": [
+     {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@welbymcroberts"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/welbymcroberts"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://mastodon.social/authorize_interaction?uri={uri}"
+    }
+  ]
+}
