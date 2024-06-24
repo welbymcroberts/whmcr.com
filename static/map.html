@@ -290,75 +290,98 @@
 
 
 
-
+<div>
+  <ul id="flags">
+  </ul>
+</div>
 <script type="text/javascript">
 
-var livedin = [ "England", "Scotland", "Northern_Ireland", "USA_Maryland" ]
+var ul = document.getElementById("flags")
+
+var livedin = [ ["England","gb-eng"], ["Scotland","gb-sct"], ["Northern_Ireland","gb-nir"], ["USA_Maryland",""] ]
 
 for (const c of livedin) {
-  console.log(c)
-  e = document.getElementById(c)
+  e = document.getElementById(c[0])
   e.style.fill = "red"
+  if (c[1] != "") {
+    var li = document.createElement("li")
+    var img = document.createElement("img")
+    img.src = "https://flagicons.lipis.dev/flags/4x3/"+c[1]+".svg"
+    img.alt=c[0]
+    img.height = "100"
+    img.width = "75"
+    li.appendChild(img)
+    ul.appendChild(li)
+  }
 }
 
 var visited = [ 
-  "Wales",
-  "Ireland",
-  "France",
-  "Germany",
-  "Spain",
-  "Portugal",
-  "Italy",
-  "Germany",
-  "Austria",
-  "Estonia",
-  "Latvia",
-  "Netherlands",
-  "Iceland",
-  "Finland",
-  "Sweden",
-  "Norway",
-  "Denmark",
-  "Switzerland",
-  "Russia",
-  "Australia",
-  "New_Zealand",
-  "Singapore",
-  "Greece",
-  "Croatia",
-  "Czechia",
-  "Türkiye",
-  "USA_Washington",
-  "USA_Michigan",
-  "USA_Maine",
-  "USA_Ohio",
-  "USA_New_Hampshire",
-  "USA_Pennsylvania",
-  "USA_California",
-  "USA_Texas",
-  "USA_Florida",
-  "USA_Georgia",
-  "USA_South_Carolina",
-  "USA_North_Carolina",
-  "USA_Virginia",
-  "USA_Washington_DC",
-  "USA_Delaware",
-  "USA_New_Jersey",
-  "USA_New_York",
-  "USA_Connecticut",
-  "USA_Rhode_Island",
-  "USA_Massachusetts",
-  "USA_Hawaii",
-  "Mexico",
-  "New_Caledonia",
-  "Vanuatu"
+  ["Wales","gb-wal"],
+  ["Ireland","ie"],
+  ["France", "fr"],
+  ["Germany","de"],
+  ["Spain","es"],
+  ["Portugal","pg"],
+  ["Italy", "it"],
+  ["Austria", "at"],
+  ["Estonia", "ee"],
+  ["Latvia", "lv"],
+  ["Netherlands", "nl"],
+  ["Iceland", "is"],
+  ["Finland", "fi"],
+  ["Sweden", "se"],
+  ["Norway", "no"],
+  ["Denmark", "dk"],
+  ["Switzerland", "ch"],
+  ["Russia", "ru"],
+  ["Australia","au"],
+  ["New_Zealand","nz"],
+  ["Singapore","sg"],
+  ["Greece","gr"],
+  ["Croatia","hr"],
+  ["Czechia","cz"],
+  ["Türkiye","tr"],
+  ["USA_Washington",""],
+  ["USA_Michigan",""],
+  ["USA_Maine",""],
+  ["USA_Ohio",""],
+  ["USA_New_Hampshire",""],
+  ["USA_Pennsylvania",""],
+  ["USA_California",""],
+  ["USA_Texas",""],
+  ["USA_Florida",""],
+  ["USA_Georgia",""],
+  ["USA_South_Carolina",""],
+  ["USA_North_Carolina",""],
+  ["USA_Virginia",""],
+  ["USA_Washington_DC",""],
+  ["USA_Delaware",""],
+  ["USA_New_Jersey",""],
+  ["USA_New_York",""],
+  ["USA_Connecticut",""],
+  ["USA_Rhode_Island",""],
+  ["USA_Massachusetts",""],
+  ["USA_Hawaii",""],
+  ["Mexico","mx"],
+  ["New_Caledonia","nc"],
+  ["Vanuatu","vu"]
   
 ]
 for (const c of visited) {
-  console.log(c)
-  e = document.getElementById(c)
+  e = document.getElementById(c[0])
   e.style.fill = "green"
+  if (c[1] != "") {
+    var li = document.createElement("li")
+    var img = document.createElement("img")
+    img.src = "https://flagicons.lipis.dev/flags/4x3/"+c[1]+".svg"
+    img.alt=c[0]
+    img.height = "100"
+    img.width = "75"
+    li.appendChild(img)
+    ul.appendChild(li)
+  }
 }
+
 </script>
 </bdoy>
 </html>
