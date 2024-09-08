@@ -26,5 +26,8 @@
                 "ui_url": "https://dimension.whmcr.com/element"
             }
         ]
+    },
+    "org.matrix.msc3575.proxy": {
+        "url": "https://matrix.whmcr.com/sliding-sync"
     }
 }
