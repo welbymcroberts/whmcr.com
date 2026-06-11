@@ -23,7 +23,7 @@
                 rel="me"
                 href="{{ "" | relLangURL }}"
             >
-                {{ .Site.Author.name | default .Site.Title }}
+                {{ .Site.Params.author.name | default .Site.Title }}
             </a>
         </h1>
         <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
