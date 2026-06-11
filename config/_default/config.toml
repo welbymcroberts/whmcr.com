@@ -21,7 +21,7 @@ summaryLength = 0
   [privacy.instagram]
     disable = true
     simple = true
-  [privacy.twitter]
+  [privacy.x]
     disable = false
     enableDNT = true
     simple = false
